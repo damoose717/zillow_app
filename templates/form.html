@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSV Generator</title>
+</head>
+<body>
+	<h1>Zillow Property Scraper</h1>
+    <form action="{{ url_for("download_csv")}}" method="post">
+        <label for="location">Location (city, zip code, etc.):</label>
+        <input type="text" id="location" name="location" placeholder="Required" required>
+        <br>
+        <br>
+        <label for="radius">Radius (miles):</label>
+        <input type="number" id="radius" name="radius" value="10" required>
+        <br>
+        <br>
+        <label for="minBeds">Min beds:</label>
+        <input type="number" id="minBeds" name="minBeds">
+        <br>
+        <br>
+        <label for="maxBeds">Max beds:</label>
+        <input type="number" id="maxBeds" name="maxBeds">
+        <br>
+        <br>
+        <label for="minBaths">Min bathrooms:</label>
+        <input type="number" id="minBaths" name="minBaths">
+        <br>
+        <br>
+        <label for="maxBaths">Max bathrooms:</label>
+        <input type="number" id="maxBaths" name="maxBaths">
+        <br>
+        <br>
+        <label for="minPrice">Min price:</label>
+        <input type="number" id="minPrice" name="minPrice">
+        <br>
+        <br>
+        <label for="maxPrice">Max price:</label>
+        <input type="number" id="maxPrice" name="maxPrice">
+        <br>
+        <br>
+        <button type="submit">Download data</button>
+    </form>
+    <div>
+        <p>{{ error }}</p>
+    </div>
+</body>
+

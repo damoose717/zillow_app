@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSV Generator</title>
+</head>
+<body>
+	<h1>Zillow Property Scraper</h1>
+	<form method="POST" action="/">
+		<label for="location">Location:</label>
+		<input type="text" id="location" name="location" required><br><br>
+		
+		<label for="radius">Radius:</label>
+		<input type="number" id="radius" name="radius" required><br><br>
+
+		<input type="submit" value="Generate CSV">
+	</form>
+
+	<div>
+		<h2>Press "Download CSV" to save results to:</h2>
+		<pre>{{ output_file }}</pre>
+	</div>
+
+	<a href="/download_csv">
+		<button>Download CSV</button>
+	</a>
+</body>
+</html>
