@@ -3,12 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>CSV Generator</title>
+	<title>Zillow Property Scraper</title>
 </head>
 <body>
 	<h1>Zillow Property Scraper</h1>
     <form action="{{ url_for("download_csv")}}" method="post">
-        <label for="location">Location (city, zip code, etc.):</label>
+        <label for="location">Location (city, zip code, neighborhood, address, etc.):</label>
         <input type="text" id="location" name="location" placeholder="Required" required>
         <br>
         <br>
